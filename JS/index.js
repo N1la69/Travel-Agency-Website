@@ -19,7 +19,7 @@ function linkAction() {
     const navMenu = document.getElementById('nav-menu');
     navMenu.classList.remove('show-menu');
 }
-navLink.forEach(n => n.addEventListener('click', linkAction));
+navLink.forEach(n => n.addEventListener('click', linkAction))
 
 // BACKGROUND HEADER //
 function scrollHeader() {
@@ -30,4 +30,9 @@ function scrollHeader() {
         header.classList.remove('scroll-header');
     }
 }
-window.addEventListener('scroll', scrollHeader);
+window.addEventListener('scroll', scrollHeader)
+
+// VIDEO //
+const videoFile = document.getElementById('video-file'),
+      videoButton = document.getElementById('video-button'),
+      videoIcon = document.getElementById('video-icon')

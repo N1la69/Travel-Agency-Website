@@ -24,9 +24,9 @@
     --body-font: 'Fira Sans', sans-serif;
     --title-font: 'Poppins', sans-serif;
     --biggest-font-size: 2.5rem;
-    --h1-font-size: 1.75rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
     --normal-font-size: .93rem;
     --small-font-size: .81rem;
     --smaller-font-size: .75rem;
@@ -389,30 +389,106 @@ input {
 }
 
 /********* Discover ************/
-.discover_card{
+.discover_card {
     position: relative;
     width: 200px;
     overflow: var(--img-hidden);
 }
-.discover_data{
+
+.discover_data {
     position: absolute;
     bottom: 1.5rem;
     left: 1rem;
 }
-.discover_title, .discover_description{
+
+.discover_title,
+.discover_description {
     color: var(--white-color);
 }
-.discover_title{
+
+.discover_title {
     font-size: var(--h3-font-size);
     margin-bottom: var(--mb-0-25);
 }
-.discover_description{
+
+.discover_description {
     display: block;
     font-size: var(--smaller-font-size);
 }
-.discover_img{
+
+.discover_img {
     transition: var(--img-transition);
 }
-.discover_img:hover{
+
+.discover_img:hover {
     transform: var(--img-scale);
+}
+
+/********* Experience ************/
+.experience_container {
+    row-gap: 2.5rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+.experience_content {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 1rem;
+    justify-items: center;
+    padding: 0 2rem;
+}
+
+.experience_number {
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--mb-0-5);
+}
+
+.experience_description {
+    font-size: var(--small-font-size);
+}
+
+.experience_img {
+    position: relative;
+    padding-bottom: 2rem;
+}
+.experience_overlay:nth-child(1){
+    width: 270px;
+    margin-right: 2rem;
+}
+.experience_overlay:nth-child(2){
+    width: 140px;
+    position: absolute;
+    top: 2rem;
+    right: 0;
+}
+.experience_img-one,.experience_img-two{
+    transition: var(--img-transition);
+}
+.experience_img-one:hover,.experience_img-two:hover{
+    transform: var(--img-scale);
+}
+.experience_overlay{
+    overflow: var(--img-hidden);
+}
+
+/********* Video ************/
+.video_container{
+    padding-bottom: 1rem;
+}
+.video_description{
+    text-align: center;
+    margin-bottom: var(--mb-2-5);
+}
+.video_content{
+    position: relative;
+}
+.video_button{
+    position: absolute;
+    right: 1rem;
+    bottom: -1rem;
+    padding: 1rem 1.5rem;
+}
+.video_button-icon{
+    font-size: 1.2rem;
 }
