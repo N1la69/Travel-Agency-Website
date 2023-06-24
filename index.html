@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="Stylesheets\cdn.jsdelivr.net_npm_swiper@9.4.1_swiper-bundle.min.css">
     <link rel="stylesheet" href="Stylesheets\style.css">
     <title>Travel Website Homepage</title>
 </head>
+
 <body>
 
     <!-- Header -->
@@ -78,19 +81,90 @@
 
         <!-- ABOUT -->
         <section class="about section" id="about">
-
+            <div class="about_container container grid">
+                <div class="about_data">
+                    <h2 class="section_title about_title">More Information <br> The Best Locations</h2>
+                    <p class="about_description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias odit
+                        excepturi impedit quibusdam enim consequuntur omnis, cumque error expedita debitis rem voluptate
+                        temporibus molestiae molestias, laudantium aperiam ab deleniti necessitatibus!
+                    </p>
+                    <a href="#" class="button">Reserve Now!</a>
+                </div>
+                <div class="about_img">
+                    <div class="about_img-overlay">
+                        <img src="Res\abt1.jpg" alt="abtImg" class="about_img-one">
+                    </div>
+                    <div class="about_img-overlay">
+                        <img src="Res\abt2.jpg" alt="abtImg" class="about_img-two">
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- DISCOVER -->
         <section class="discover section" id="discover">
-            
+            <h2 class="section_title">Discover The <br> Most Beautiful Places</h2>
+            <div class="discover_container container swiper">
+                <div class="swiper-wrapper">
+                    <!-- LOCATION 1 -->
+                    <div class="discover_card swiper-slide">
+                        <img src="Res\dis1.jpg" alt="disImg" class="discover_img">
+                        <div class="discover_data">
+                            <h2 class="discover_title">Bali</h2>
+                            <span class="discover_description">20 Tours Available</span>
+                        </div>
+                    </div>
+                    <!-- LOCATION 2 -->
+                    <div class="discover_card swiper-slide">
+                        <img src="Res\dis2.jpg" alt="disImg" class="discover_img">
+                        <div class="discover_data">
+                            <h2 class="discover_title">Greece</h2>
+                            <span class="discover_description">12 Tours Available</span>
+                        </div>
+                    </div>
+                    <!-- LOCATION 3 -->
+                    <div class="discover_card swiper-slide">
+                        <img src="Res\dis3.jpg" alt="disImg" class="discover_img">
+                        <div class="discover_data">
+                            <h2 class="discover_title">Spain</h2>
+                            <span class="discover_description">15 Tours Available</span>
+                        </div>
+                    </div>
+                    <!-- LOCATION 4 -->
+                    <div class="discover_card swiper-slide">
+                        <img src="Res\dis4.jpg" alt="disImg" class="discover_img">
+                        <div class="discover_data">
+                            <h2 class="discover_title">Maldives</h2>
+                            <span class="discover_description">10 Tours Available</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
     </main>
 
-    
+
 </body>
 
 <!-- Necessary Scripts -->
 <script src="JS\index.js"></script>
+<script src="JS\cdn.jsdelivr.net_npm_swiper@9.4.1_swiper-bundle.min.js"></script>
+<script>
+    // SWIPER //
+    var swiper = new Swiper(".discover_container", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        loop: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
+    });
+</script>
 
 </html>
