@@ -452,43 +452,120 @@ input {
     position: relative;
     padding-bottom: 2rem;
 }
-.experience_overlay:nth-child(1){
+
+.experience_overlay:nth-child(1) {
     width: 270px;
     margin-right: 2rem;
 }
-.experience_overlay:nth-child(2){
+
+.experience_overlay:nth-child(2) {
     width: 140px;
     position: absolute;
     top: 2rem;
     right: 0;
 }
-.experience_img-one,.experience_img-two{
+
+.experience_img-one,
+.experience_img-two {
     transition: var(--img-transition);
 }
-.experience_img-one:hover,.experience_img-two:hover{
+
+.experience_img-one:hover,
+.experience_img-two:hover {
     transform: var(--img-scale);
 }
-.experience_overlay{
+
+.experience_overlay {
     overflow: var(--img-hidden);
 }
 
 /********* Video ************/
-.video_container{
+.video_container {
     padding-bottom: 1rem;
 }
-.video_description{
+
+.video_description {
     text-align: center;
     margin-bottom: var(--mb-2-5);
 }
-.video_content{
+
+.video_content {
     position: relative;
 }
-.video_button{
+
+.video_button {
     position: absolute;
     right: 1rem;
     bottom: -1rem;
     padding: 1rem 1.5rem;
 }
-.video_button-icon{
+
+.video_button-icon {
     font-size: 1.2rem;
+}
+
+/********* Places ************/
+.place_img{
+    height: 100%;
+    width: 100%;
+}
+.place_card{
+    height: 230px;
+    width: 150px;
+    position: relative;
+    overflow: var(--img-hidden);
+}
+.place_container{
+    grid-template-columns: repeat(2, max-content);
+    justify-content: center;
+    justify-items: center;
+}
+.place_content,.place_title{
+    color: var(--white-color);
+}
+.place_content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .75rem .75rem 1rem;
+}
+.place_rating{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+}
+.place_rating-icon{
+    font-size: .75rem;
+    margin-right: var(--mb-0-25);
+}
+.place_rating-number{
+    font-size: var(--small-font-size);
+}
+.place_subtitle, .place_price{
+    display: block;
+}
+.place_title{
+    font-size: var(--h3-font-size);
+    margin-bottom: var(--mb-0-25);
+}
+.place_subtitle{
+    font-size: var(--smaller-font-size);
+    margin-bottom: var(--mb-1-25);
+}
+.place_button{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    padding: .75rem 1rem;
+}
+.place_img{
+    transition: var(--img-transition);
+}
+.place_card:hover .place_img{
+    transform: var(--img-scale);
 }
