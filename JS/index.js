@@ -42,16 +42,27 @@ function playPause() {
         videoFile.play()
         videoIcon.classList.add('ri-pause-line')
         videoIcon.classList.remove('ri-play-line')
-    } else{
+    } else {
         videoFile.pause()
         videoIcon.classList.add('ri-play-line')
         videoIcon.classList.remove('ri-pause-line')
     }
 }
-videoButton.addEventListener('click',playPause);
+videoButton.addEventListener('click', playPause);
 
-function finalVideo(){
+function finalVideo() {
     videoIcon.classList.add('ri-play-line')
     videoIcon.classList.remove('ri-pause-line')
 }
-videoFile.addEventListener('ended',finalVideo);
+videoFile.addEventListener('ended', finalVideo);
+
+// SCROLLUP //
+function scrollUp() {
+    const scrollUp = document.getElementById('scroll-up')
+    if (this.scrollY >= 200) {
+        scrollUp.classList.add('show-scroll');
+    } else {
+        scrollUp.classList.remove('show-scroll');
+    }
+}
+window.addEventListener('scroll', scrollUp);
