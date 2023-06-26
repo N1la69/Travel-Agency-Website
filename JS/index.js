@@ -70,14 +70,14 @@ window.addEventListener('scroll', scrollUp);
 // SCROLL-SECTION ACTIVE LINK //
 const sections = document.querySelectorAll('section[id]')
 
-function scrollActive(){
+function scrollActive() {
     const scrollY = window.pageYOffset;
     sections.forEach(current => {
         const sectionHeight = current.offsetHeight
         const sectionTop = current.offsetTop - 50;
         const sectionId = current.getAttribute('id');
 
-        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.add('active-link');
         } else {
             document.querySelector('.nav_menu a[href*=' + sectionId + ']').classList.remove('active-link');
@@ -98,7 +98,7 @@ const selectedIcon = localStorage.getItem('selected-button')
 const getCurrentTheme = () => document.body.classList.contains('darkTheme') ? 'dark' : 'light';
 const getCurrentIcon = () => themeButton.classList.contains('iconTheme') ? 'ri-moon-line' : 'ri-sun-line';
 
-if(selectedTheme){
+if (selectedTheme) {
     document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme);
     themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme);
 }
@@ -109,4 +109,23 @@ themeButton.addEventListener('click', () => {
 
     localStorage.setItem('selected-theme', getCurrentTheme);
     localStorage.setItem('selected-icon', getCurrentIcon);
+})
+
+// SCROLL REVEAL //
+const sr = ScrollReveal({
+    distance: '60px',
+    duration: 2800,
+    reset: true,
+})
+
+sr.reveal('.home_data, .home_info, .discover_container, .experience_data, .experience_overlay, .place_card, .sponsor_content, .footer_data, .footer_rights', {
+    origin: 'top',
+    interval: 150
+})
+sr.reveal('.about_data, .video_description, .subscribe_description', {
+    origin: 'left'
+})
+sr.reveal('.about_img-overlay, .video_content, .subscribe_form', {
+    origin: 'right',
+    interval: 200
 })
